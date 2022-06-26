@@ -1,0 +1,39 @@
+
+
+//ChromiumAutomation
+
+
+//Log in 
+https://wirelessprovisioning.com/Login?returnurl=%2F 
+#dnn_ctr6839_AliasSignin_txtUsername #dnn_ctr6839_AliasSignin_txtPassword
+
+// Add 1time pay notes
+https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+#dnn_ctr2307_CustomerNotes_View_btnAddNote 
+#dnn_ctr2307_CustomerNotes_View_listContactMethod 
+#dnn_ctr2307_CustomerNotes_View_listNoteType 
+#dnn_ctr2307_CustomerNotes_View_listSubNoteType 
+#dnn_ctr2307_CustomerNotes_View_listReason 
+#dnn_ctr2307_CustomerNotes_View_txtNote
+
+//Restore/suspend 
+https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+#dnn_ctr2307_CustomerNotes_View_btnAddNote 
+#dnn_ctr2307_CustomerNotes_View_listContactMethod 
+#dnn_ctr2307_CustomerNotes_View_listNoteType 
+#dnn_ctr2307_CustomerNotes_View_listSubNoteType 
+#dnn_ctr2307_CustomerNotes_View_listReason 
+#dnn_ctr2307_CustomerNotes_View_txtNote
+
+//Update Billing info
+https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+#dnn_ctr2307_CustomerNotes_View_btnAddNote 
+#dnn_ctr2307_CustomerNotes_View_listContactMethod 
+#dnn_ctr2307_CustomerNotes_View_listNoteType 
+#dnn_ctr2307_CustomerNotes_View_listSubNoteType 
+#dnn_ctr2307_CustomerNotes_View_listReason 
+#dnn_ctr2307_CustomerNotes_View_txtNote
+
+// ESN check 
+https://wirelessprovisioning.com/Tools-Calculators/ESN-Validation 
+#dnn_ctr4750_Wireless_ValidateDevice_listMode
