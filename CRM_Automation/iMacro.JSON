@@ -1,0 +1,48 @@
+//Automation tasks
+
+//Add Notes
+
+//Make a One-Time Payment
+
+VERSION BUILD=1011 RECORDER=CR URL GOTO=https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_btnAddNote 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listContactMethod CONTENT=%AccountRemark 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listNoteType CONTENT=%Payments
+WAIT SECONDS=3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listSubNoteType CONTENT=%MakeAOneTimePayment 
+WAIT SECONDS=3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listReason CONTENT=%Default 
+TAG POS=1 TYPE=TEXTAREA FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_txtNote CONTENT=FreshdeskTicket:
+
+
+// Plan Change
+VERSION BUILD=1011 RECORDER=CR URL GOTO=https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_btnAddNote 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listContactMethod CONTENT=%AccountRemark 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listNoteType CONTENT=%AccountSupport 
+WAIT SECONDS=3
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listSubNoteType CONTENT=%PlanChange 
+WAIT SECONDS=3
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listReason CONTENT=%IndividualPlanChange TAG POS=1 TYPE=TEXTAREA FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_txtNote CONTENT=FreshdeskTicket:
+
+// Add data
+VERSION BUILD=1011 RECORDER=CR URL GOTO=https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_btnAddNote 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listContactMethod CONTENT=%AccountRemark 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listNoteType CONTENT=%AccountSupport WAIT SECONDS=3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listSubNoteType CONTENT=%PlanChange WAIT SECONDS=3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listReason CONTENT=%PlanAdd-on 
+TAG POS=1 TYPE=TEXTAREA FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_txtNote CONTENT=FreshdeskTicket:
+
+
+// Update Payment
+
+VERSION BUILD=1011 RECORDER=CR URL GOTO=https://wirelessprovisioning.com/Hybrid/Wireless-Services 
+TAG POS=1 TYPE=INPUT:SUBMIT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_btnAddNote 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listContactMethod CONTENT=%AccountRemark 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listNoteType CONTENT=%Payments 
+WAIT SECONDS=3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listSubNoteType CONTENT=%UpdatePaymentInformation 
+WAIT SECONDS = 3 
+TAG POS=1 TYPE=SELECT FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_listReason CONTENT=%Default 
+TAG POS=1 TYPE=TEXTAREA FORM=ID:Form ATTR=ID:dnn_ctr2307_CustomerNotes_View_txtNote CONTENT=FreshdeskTicket:
